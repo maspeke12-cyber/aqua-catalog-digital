@@ -16,7 +16,7 @@ import { ProductCard } from '@/components/cards/ProductCard';
 
 type SortMode = 'default' | 'name-asc' | 'name-desc';
 
-export function CatalogClient() {
+export function CatalogClient({ initialProducts = SHOWROOM_PRODUCTS }: { initialProducts?: import("@/types/showroom").ProductItem[] }) {
   const searchParams = useSearchParams();
   const initialParam = searchParams.get('kategori');
   const initialCategory = useMemo(() => {
@@ -33,7 +33,7 @@ export function CatalogClient() {
 
   const filteredProducts = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    const list = SHOWROOM_PRODUCTS.filter((item) => {
+    const list = initialProducts.filter((item) => {
       const matchCat = selectedCategory === 'ALL' || item.categoryName === selectedCategory;
       const matchQ = !q || item.name.toLowerCase().includes(q) || item.model.toLowerCase().includes(q) || item.categoryName.toLowerCase().includes(q);
       return matchCat && matchQ;

@@ -2,6 +2,7 @@ import React from 'react';
 import { PREVIEW_FINANCING_PARTNERS, STORE_INFO } from '@/data/previewData';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { PartnerLogoBox } from "@/components/ui/PartnerLogoBox";
 import { Badge } from '@/components/ui/Badge';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
@@ -25,23 +26,7 @@ export function FinancingSection() {
               className="flex flex-col justify-between rounded-[8px] border border-[#E5E5E5] bg-white p-5 sm:p-6"
             >
               <div>
-                <div className="flex h-16 items-center justify-between rounded-[6px] border border-[#E5E5E5] bg-[#FAFAFA] px-4">
-                  {partner.logoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={partner.logoUrl}
-                      alt={`Logo ${partner.name}`}
-                      className="max-h-10 w-auto object-contain"
-                    />
-                  ) : (
-                    <span className="text-lg font-extrabold tracking-tight text-[#111111]">
-                      {partner.name}
-                    </span>
-                  )}
-                  <span className="rounded-[3px] border border-[#E5E5E5] bg-white px-2 py-0.5 text-[10px] font-medium text-[#6B6B6B]">
-                    Logo Partner
-                  </span>
-                </div>
+                <PartnerLogoBox name={p.name} logoUrl={p.logoUrl} />
 
                 <div className="mt-4">
                   <Badge variant="neutral">{partner.categoryLabel}</Badge>

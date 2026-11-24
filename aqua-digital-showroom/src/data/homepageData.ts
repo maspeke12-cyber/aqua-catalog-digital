@@ -30,7 +30,7 @@ export const HERO_DATA: HeroBannerData = {
   headline: 'Katalog Digital Perangkat Elektronik AQUA untuk Hunian Modern.',
   subheadline:
     'Jelajahi jajaran televisi, lemari es, mesin cuci, pendingin ruangan, perangkat audio, hingga perlengkapan rumah tangga AQUA Elektronik. Periksa detail produk dan konsultasikan ketersediaan unit langsung dengan tim kami.',
-  bannerImageUrl: undefined,
+  bannerImageUrl: "/images/banners/hero-banner.jpg",
   bannerTitle: 'Campaign Banner AQUA Elektronik',
   bannerCaption: 'Area Visual Utama Showroom • Rasio Landscape 16:10',
 };
@@ -87,7 +87,7 @@ export const SHOWROOM_PRODUCTS: ProductItem[] = [
     id: 'prod-1',
     name: 'AQUA Google TV 4K UHD Series',
     model: 'MODEL-PREVIEW-TV01',
-    slug: 'aqua-google-tv-4k-uhd',
+    slug: 'aqua-google-tv-4k-uhd', imageUrl: '/images/products/tv-1.jpg',
     categoryName: 'TV',
     shortInfo: 'Smart TV beresolusi 4K UHD dengan bingkai tipis minimalis.',
     description:
@@ -104,7 +104,7 @@ export const SHOWROOM_PRODUCTS: ProductItem[] = [
     id: 'prod-2',
     name: 'AQUA Multi Door Refrigerator',
     model: 'MODEL-PREVIEW-REF01',
-    slug: 'aqua-multi-door-refrigerator',
+    slug: 'aqua-multi-door-refrigerator', imageUrl: '/images/products/ref-1.jpg',
     categoryName: 'Refrigerator',
     shortInfo: 'Lemari es multi pintu dengan kompartemen penyimpanan luas.',
     description:
@@ -121,7 +121,7 @@ export const SHOWROOM_PRODUCTS: ProductItem[] = [
     id: 'prod-3',
     name: 'AQUA Front Loading Washing Machine',
     model: 'MODEL-PREVIEW-WM01',
-    slug: 'aqua-front-loading-washing-machine',
+    slug: 'aqua-front-loading-washing-machine', imageUrl: '/images/products/wm-1.jpg',
     categoryName: 'Washing Machine',
     shortInfo: 'Mesin cuci bukaan depan dengan panel kontrol digital.',
     description:
@@ -138,7 +138,7 @@ export const SHOWROOM_PRODUCTS: ProductItem[] = [
     id: 'prod-4',
     name: 'AQUA Inverter Split Air Conditioner',
     model: 'MODEL-PREVIEW-AC01',
-    slug: 'aqua-inverter-split-ac',
+    slug: 'aqua-inverter-split-ac', imageUrl: '/images/products/ac-1.jpg',
     categoryName: 'Air Conditioner',
     shortInfo: 'Pendingin ruangan split dengan kendali suhu stabil.',
     description:
@@ -155,7 +155,7 @@ export const SHOWROOM_PRODUCTS: ProductItem[] = [
 
 export const SHOWROOM_PROMOS: PromoItem[] = [
   {
-    id: 'promo-1',
+    id: 'promo-1', posterUrl: '/images/promos/promo-1.jpg',
     title: 'Informasi Penawaran Produk Pilihan AQUA Elektronik',
     label: 'Program Showroom',
     period: 'Periode: Mengikuti jadwal program resmi toko',
@@ -163,7 +163,7 @@ export const SHOWROOM_PROMOS: PromoItem[] = [
       'Dapatkan informasi ketersediaan unit, hadiah langsung, maupun program cashback resmi yang sedang berlangsung di gerai CLEO ELECTRONICS by TIARA, Jl. Dewi Sartika No.66-72, Kota Palu.',
   },
   {
-    id: 'promo-2',
+    id: 'promo-2', posterUrl: '/images/promos/promo-2.jpg',
     title: 'Konsultasi Kebutuhan Perangkat Elektronik Rumah Tangga',
     label: 'Layanan Pelanggan',
     period: 'Tersedia setiap hari di Jl. Dewi Sartika No.66-72, Kota Palu',
@@ -176,6 +176,7 @@ export const FINANCING_PARTNERS: FinancingPartnerItem[] = [
   {
     id: 'fin-home-credit',
     name: 'Home Credit',
+    logoUrl: '/images/financing/home-credit.png',
     categoryLabel: 'Mitra Pembiayaan Ritel',
     description:
       'Layanan pembiayaan cicilan untuk pembelian perangkat elektronik pilihan langsung di gerai CLEO ELECTRONICS by TIARA.',
@@ -185,6 +186,7 @@ export const FINANCING_PARTNERS: FinancingPartnerItem[] = [
   {
     id: 'fin-kredivo',
     name: 'Kredivo',
+    logoUrl: '/images/financing/kredivo.png',
     categoryLabel: 'Pembiayaan Digital',
     description:
       'Metode pembayaran bertahap bagi pelanggan yang telah memiliki akun dan limit aktif pada aplikasi Kredivo.',
@@ -194,6 +196,7 @@ export const FINANCING_PARTNERS: FinancingPartnerItem[] = [
   {
     id: 'fin-kredit-plus',
     name: 'Kredit Plus',
+    logoUrl: '/images/financing/kredit-plus.png',
     categoryLabel: 'Mitra Multifinance',
     description:
       'Pilihan pembiayaan multifinance untuk memudahkan kepemilikan produk elektronik rumah tangga dengan proses terarah.',

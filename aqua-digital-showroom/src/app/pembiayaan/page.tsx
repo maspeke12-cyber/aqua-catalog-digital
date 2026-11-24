@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Container } from '@/components/ui/Container';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { PartnerLogoBox } from "@/components/ui/PartnerLogoBox";
 import { Badge } from '@/components/ui/Badge';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp';
@@ -37,10 +38,7 @@ export default function FinancingPage() {
               {FINANCING_PARTNERS.map((p) => (
                 <article key={p.id} className="flex flex-col justify-between rounded-[8px] border border-[#E5E5E5] bg-white p-5 sm:p-6">
                   <div>
-                    <div className="flex h-16 items-center justify-between rounded-[6px] border border-[#E5E5E5] bg-[#FAFAFA] px-4">
-                      <span className="text-lg font-extrabold text-[#111111]">{p.name}</span>
-                      <span className="rounded-[3px] border border-[#E5E5E5] bg-white px-2 py-0.5 text-[10px] text-[#6B6B6B]">Logo Partner</span>
-                    </div>
+                    <PartnerLogoBox name={p.name} logoUrl={p.logoUrl} />
                     <div className="mt-4"><Badge variant="neutral">{p.categoryLabel}</Badge></div>
                     <p className="mt-3 text-sm leading-relaxed text-[#6B6B6B]">{p.description}</p>
                   </div>
