@@ -17,7 +17,7 @@ export async function getShowroomData(): Promise<ShowroomPayload> {
     settings: { ...STORE_SETTINGS, ...(local.settings ?? {}) },
     hero: { ...HERO_DATA, ...(local.hero ?? {}) },
     products: Array.isArray(local.products) ? local.products : SHOWROOM_PRODUCTS,
-    promos: Array.isArray(local.promos) && local.promos.length > 0 ? local.promos : SHOWROOM_PROMOS,
+    promos: Array.isArray(local.promos) ? local.promos : [],
   };
 }
 

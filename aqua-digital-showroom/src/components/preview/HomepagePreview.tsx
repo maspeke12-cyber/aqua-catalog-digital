@@ -35,8 +35,8 @@ type PreviewModalItem =
 
 export function HomepagePreview({ cmsData }: { cmsData?: Partial<ShowroomPayload> }) {
   const HERO_DATA = cmsData?.hero || _HERO_DATA;
-  const SHOWROOM_PRODUCTS = cmsData?.products || _SHOWROOM_PRODUCTS;
-  const SHOWROOM_PROMOS = cmsData?.promos || _SHOWROOM_PROMOS;
+  const SHOWROOM_PRODUCTS = cmsData?.products ?? [];
+  const SHOWROOM_PROMOS = cmsData?.promos ?? [];
   const STORE_SETTINGS = { ..._STORE_SETTINGS, ...(cmsData?.settings || {}) };
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
@@ -107,8 +107,8 @@ export function HomepagePreview({ cmsData }: { cmsData?: Partial<ShowroomPayload
           <Container>
             <SectionHeading
               eyebrow="Katalog Pilihan"
-              title="Pratinjau Kartu Produk Showroom"
-              description="Struktur kartu produk dengan area foto seragam, kode model jelas, ruang harga opsional, dan tombol detail."
+              title="Katalog Produk Showroom"
+              description="Pilihan unit elektronik resmi AQUA yang tersedia di CLEO ELECTRONICS by TIARA."
               action={
                 <div className="flex flex-wrap gap-2">
                   {['ALL', 'TV', 'Refrigerator', 'Washing Machine', 'Air Conditioner'].map(
@@ -232,7 +232,7 @@ export function HomepagePreview({ cmsData }: { cmsData?: Partial<ShowroomPayload
 
       <Footer />
 
-      {/* Modal Pratinjau Detail */}
+      {/* Modal Detail */}
       {modalItem && (
         <div
           role="dialog"
