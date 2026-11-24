@@ -26,7 +26,7 @@ export function FinancingSection() {
               className="flex flex-col justify-between rounded-[8px] border border-[#E5E5E5] bg-white p-5 sm:p-6"
             >
               <div>
-                <PartnerLogoBox name={p.name} logoUrl={p.logoUrl} />
+                <PartnerLogoBox name={partner.name} logoUrl={partner.logoUrl} />
 
                 <div className="mt-4">
                   <Badge variant="neutral">{partner.categoryLabel}</Badge>

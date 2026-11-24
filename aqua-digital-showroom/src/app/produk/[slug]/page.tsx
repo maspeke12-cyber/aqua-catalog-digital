@@ -6,7 +6,6 @@ import { getShowroomData } from '@/lib/showroomService';
 import { ProductDetailClient } from '@/components/catalog/ProductDetailClient';
 
 interface Props { params: Promise<{ slug: string }>; }
-export const dynamicParams = true;
 
 export function generateStaticParams() {
   return SHOWROOM_PRODUCTS.map((p) => ({ slug: p.slug }));

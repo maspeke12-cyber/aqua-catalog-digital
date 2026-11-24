@@ -30,7 +30,7 @@ export const HERO_DATA: HeroBannerData = {
   headline: 'Katalog Digital Perangkat Elektronik AQUA untuk Hunian Modern.',
   subheadline:
     'Jelajahi jajaran televisi, lemari es, mesin cuci, pendingin ruangan, perangkat audio, hingga perlengkapan rumah tangga AQUA Elektronik. Periksa detail produk dan konsultasikan ketersediaan unit langsung dengan tim kami.',
-  bannerImageUrl: "/images/banners/hero-banner.jpg",
+  bannerImageUrl: "/images/banners/hero-banner.png",
   bannerTitle: 'Campaign Banner AQUA Elektronik',
   bannerCaption: 'Area Visual Utama Showroom • Rasio Landscape 16:10',
 };
