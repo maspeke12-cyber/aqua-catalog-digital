@@ -31,7 +31,7 @@
   "promos": [
     {
       "id": "promo-1",
-      "posterUrl": "",
+      "posterUrl": "/images/promos/1795545909750-1000166323.png",
       "title": "Informasi Penawaran Produk Pilihan AQUA Elektronik",
       "label": "Program Showroom",
       "period": "Periode: Mengikuti jadwal program resmi toko",
@@ -39,7 +39,7 @@
     },
     {
       "id": "promo-2",
-      "posterUrl": "",
+      "posterUrl": "/images/promos/promo-2.jpg",
       "title": "Konsultasi Kebutuhan Perangkat Elektronik Rumah Tangga",
       "label": "Layanan Pelanggan",
       "period": "Tersedia setiap hari di Jl. Dewi Sartika No.66-72, Kota Palu",
