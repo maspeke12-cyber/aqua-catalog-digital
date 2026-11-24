@@ -1,3 +1,5 @@
+import { FINANCING_PARTNERS, HERO_DATA as _HERO_DATA, SHOWROOM_CATEGORIES, SHOWROOM_PRODUCTS as _SHOWROOM_PRODUCTS, SHOWROOM_PROMOS as _SHOWROOM_PROMOS, STORE_SETTINGS as _STORE_SETTINGS } from "@/data/homepageData";
+import type { ShowroomPayload } from "@/lib/showroomService";
 'use client';
 
 import React, { useMemo, useState } from 'react';
@@ -31,7 +33,11 @@ type PreviewModalItem =
   | { type: 'promo'; data: PreviewPromo }
   | null;
 
-export function HomepagePreview() {
+export function HomepagePreview({ cmsData }: { cmsData?: Partial<ShowroomPayload> }) {
+  const HERO_DATA = cmsData?.hero || _HERO_DATA;
+  const SHOWROOM_PRODUCTS = cmsData?.products || _SHOWROOM_PRODUCTS;
+  const SHOWROOM_PROMOS = cmsData?.promos || _SHOWROOM_PROMOS;
+  const STORE_SETTINGS = { ..._STORE_SETTINGS, ...(cmsData?.settings || {}) };
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [modalItem, setModalItem] = useState<PreviewModalItem>(null);

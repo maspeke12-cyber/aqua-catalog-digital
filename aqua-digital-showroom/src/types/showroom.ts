@@ -10,6 +10,7 @@ export interface StoreSettings {
   storeTagline: string;
   address: string;
   whatsappNumber: string;
+  consultationBannerUrl?: string;
   whatsappDisplay: string;
   operationalHours: string;
   socials: { name: string; label: string }[];
