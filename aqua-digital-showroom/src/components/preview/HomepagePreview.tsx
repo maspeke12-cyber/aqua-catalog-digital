@@ -1,6 +1,6 @@
+"use client";
 import { FINANCING_PARTNERS, HERO_DATA as _HERO_DATA, SHOWROOM_CATEGORIES, SHOWROOM_PRODUCTS as _SHOWROOM_PRODUCTS, SHOWROOM_PROMOS as _SHOWROOM_PROMOS, STORE_SETTINGS as _STORE_SETTINGS } from "@/data/homepageData";
 import type { ShowroomPayload } from "@/lib/showroomService";
-'use client';
 
 import React, { useMemo, useState } from 'react';
 import {

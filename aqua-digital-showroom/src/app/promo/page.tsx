@@ -1,3 +1,4 @@
+import cmsData from "@/data/showroom-cms.json";
 import React from 'react';
 import type { Metadata } from 'next';
 import { getShowroomData } from '@/lib/showroomService';

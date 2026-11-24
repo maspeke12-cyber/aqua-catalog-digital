@@ -1,14 +1,17 @@
+import cmsData from "@/data/showroom-cms.json";
+import type { ProductItem } from "@/types/showroom";
 import React from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { SHOWROOM_PRODUCTS, STORE_SETTINGS } from '@/data/homepageData';
+import { STORE_SETTINGS } from "@/data/homepageData";
+
 import { getShowroomData } from '@/lib/showroomService';
 import { ProductDetailClient } from '@/components/catalog/ProductDetailClient';
 
 interface Props { params: Promise<{ slug: string }>; }
 
 export function generateStaticParams() {
-  return SHOWROOM_PRODUCTS.map((p) => ({ slug: p.slug }));
+  return (cmsData.products.length ? cmsData.products : ([{ slug: "katalog" }] as ProductItem[])).map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
