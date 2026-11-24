@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary-black: #111111;
+    --color-white: #ffffff;
+      --color-background: #f7f7f7;
+        --color-surface: #eeeeee;
+          --color-secondary-text: #6b6b6b;
+            --color-border: #e5e5e5;
+              --color-aqua-blue: #0066b3;
+                --color-aqua-blue-hover: #005291;
+                  --color-aqua-blue-subtle: #f0f7fc;
+                    --color-whatsapp-green: #168a4a;
+                      --color-whatsapp-green-hover: #12703c;
+                      }
+
+                      @layer base {
+                        html {
+                            scroll-behavior: smooth;
+                                overflow-x: hidden;
+                                  }
+
+                                    body {
+                                        background-color: var(--color-white);
+                                            color: var(--color-primary-black);
+                                                font-family: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+                                                    overflow-x: hidden;
+                                                        -webkit-font-smoothing: antialiased;
+                                                            -moz-osx-font-smoothing: grayscale;
+                                                              }
+                                                              }
