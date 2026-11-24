@@ -13,7 +13,7 @@ export function PromoCard({ promo, onSelectPromo }: PromoCardProps) {
   return (
     <article className="flex flex-col overflow-hidden rounded-[8px] border border-[#E5E5E5] bg-white">
       <div className="aspect-[16/9] w-full overflow-hidden border-b border-[#E5E5E5] bg-[#F7F7F7]">
-        <SafeImage
+        {promo.posterUrl ? (<SafeImage
           src={promo.posterUrl}
           alt={promo.title}
           slotType="promo-poster"
@@ -21,7 +21,7 @@ export function PromoCard({ promo, onSelectPromo }: PromoCardProps) {
           label={promo.title}
           ratioHint="16:9"
           className="h-full w-full"
-        />
+        />) : null}
       </div>
 
       <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">

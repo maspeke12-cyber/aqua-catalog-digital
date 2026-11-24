@@ -52,7 +52,7 @@ export function ProductDetailClient({ product, relatedProducts }: Props) {
                     <button key={idx} type="button" onClick={() => setActiveIdx(idx)} className={`aspect-[4/3] overflow-hidden rounded-[6px] border bg-[#FAFAFA] ${activeIdx === idx ? 'border-[#0066B3] ring-1 ring-[#0066B3]' : 'border-[#E5E5E5]'}`}>
                       {images[idx] ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={images[idx]} alt={`${product.name} ${idx + 1}`} className="h-full w-full object-cover" />
+                        <img src={images[idx]} alt={`${product.name} ${idx + 1}`} className="h-full w-full object-contain" />
                       ) : (
                         <span className="flex h-full items-center justify-center text-[10px] font-medium text-[#6B6B6B]">Foto {idx + 1}</span>
                       )}
