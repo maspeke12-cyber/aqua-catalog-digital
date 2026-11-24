@@ -1,11 +1,9 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
-import {
-  SHOWROOM_CATEGORIES,
-  SHOWROOM_PRODUCTS,
-  SHOWROOM_PROMOS,
-} from '@/data/homepageData';
+import { SHOWROOM_CATEGORIES, SHOWROOM_PRODUCTS, SHOWROOM_PROMOS as _RAW_PROMOS } from "@/data/homepageData";
+import cmsData from "@/data/showroom-cms.json";
+const SHOWROOM_PROMOS = (cmsData.promos || _RAW_PROMOS) as typeof _RAW_PROMOS;
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';

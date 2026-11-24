@@ -1,5 +1,7 @@
 "use client";
-import { FINANCING_PARTNERS, HERO_DATA as _HERO_DATA, SHOWROOM_CATEGORIES, SHOWROOM_PRODUCTS as _SHOWROOM_PRODUCTS, SHOWROOM_PROMOS as _SHOWROOM_PROMOS, STORE_SETTINGS as _STORE_SETTINGS } from "@/data/homepageData";
+import { FINANCING_PARTNERS, HERO_DATA as _HERO_DATA, SHOWROOM_CATEGORIES, SHOWROOM_PRODUCTS as _SHOWROOM_PRODUCTS, SHOWROOM_PROMOS as _RAW_PROMOS, STORE_SETTINGS as _STORE_SETTINGS } from "@/data/homepageData";
+import cmsData from "@/data/showroom-cms.json";
+const _SHOWROOM_PROMOS = (cmsData.promos || _RAW_PROMOS) as typeof _RAW_PROMOS;
 import type { ShowroomPayload } from "@/lib/showroomService";
 
 import React, { useMemo, useState } from 'react';
