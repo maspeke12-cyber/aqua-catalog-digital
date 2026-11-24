@@ -209,7 +209,7 @@ export function HomepagePreview() {
 
                 <div className="flex flex-col gap-3 lg:col-span-4 lg:items-end">
                   <WhatsAppButton
-                    phone={STORE_INFO.whatsappPlaceholder}
+                    phone={STORE_INFO.whatsappNumber}
                     size="lg"
                     fullWidth
                     label="Konsultasi via WhatsApp"
@@ -274,7 +274,7 @@ export function HomepagePreview() {
                 </ul>
                 <div className="mt-6">
                   <WhatsAppButton
-                    phone={STORE_INFO.whatsappPlaceholder}
+                    phone={STORE_INFO.whatsappNumber}
                     fullWidth
                     message={`Halo CLEO ELECTRONICS by TIARA, saya ingin menanyakan detail produk ${modalItem.data.name} (${modalItem.data.model}).`}
                     label="Konsultasi via WhatsApp"
@@ -316,7 +316,7 @@ export function HomepagePreview() {
                 </p>
                 <div className="mt-6">
                   <WhatsAppButton
-                    phone={STORE_INFO.whatsappPlaceholder}
+                    phone={STORE_INFO.whatsappNumber}
                     fullWidth
                     message={`Halo CLEO ELECTRONICS by TIARA, saya ingin menanyakan informasi terkait ${modalItem.data.title}.`}
                     label="Konsultasi via WhatsApp"

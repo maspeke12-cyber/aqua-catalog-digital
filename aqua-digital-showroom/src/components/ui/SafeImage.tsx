@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 interface SafeImageProps {
   src?: string;
@@ -12,13 +12,13 @@ interface SafeImageProps {
 }
 
 export function SafeImage({ src, alt, eyebrow, label, ratioHint, className = '' }: SafeImageProps) {
-  const [hasError, setHasError] = useState(false);
-  useEffect(() => { setHasError(false); }, [src]);
+  const [failedSrc, setFailedSrc] = useState<string | null>(null);
+  const hasError = Boolean(src && failedSrc === src);
 
   if (src && !hasError) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt={alt} onError={() => setHasError(true)} className={`h-full w-full object-cover ${className}`} />
+      <img src={src} alt={alt} onError={() => setFailedSrc(src)} className={`h-full w-full object-cover ${className}`} />
     );
   }
 

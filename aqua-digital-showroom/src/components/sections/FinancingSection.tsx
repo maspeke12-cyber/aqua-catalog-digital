@@ -58,7 +58,7 @@ export function FinancingSection() {
           </div>
           <div className="shrink-0">
             <WhatsAppButton
-              phone={STORE_INFO.whatsappPlaceholder}
+              phone={STORE_INFO.whatsappNumber}
               variant="outline"
               label="Konsultasi via WhatsApp"
             />

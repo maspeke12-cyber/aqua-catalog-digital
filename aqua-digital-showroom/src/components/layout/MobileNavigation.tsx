@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { NavItem, STORE_SETTINGS } from '@/data/homepageData';
+import { STORE_SETTINGS } from '@/data/homepageData';
+import { NavItem } from '@/types/showroom';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 
 interface Props { isOpen: boolean; items: NavItem[]; onClose: () => void; }

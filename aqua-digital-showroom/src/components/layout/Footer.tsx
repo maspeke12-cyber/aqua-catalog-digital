@@ -25,7 +25,7 @@ export function Footer() {
 
             <div className="mt-6">
               <WhatsAppButton
-                phone={STORE_INFO.whatsappPlaceholder}
+                phone={STORE_INFO.whatsappNumber}
                 label="Hubungi Sales AQUA"
               />
               <p className="mt-2 text-xs text-white/60">
