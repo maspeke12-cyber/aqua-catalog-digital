@@ -148,13 +148,11 @@ export function HomepagePreview({ cmsData }: { cmsData?: Record<string, any> } =
         <div className="mt-5 grid gap-6 md:grid-cols-2">
           {SHOWROOM_PROMOS.map((promo: any, idx: number) => (
             <div key={promo.id || idx} className="overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
-              {promo.posterUrl ? (
-                <img
+              {promo.posterUrl ? (<img
                   src={promo.posterUrl}
                   alt={promo.title}
                   className="block h-auto w-full object-contain"
-                />
-              ) : null}
+                />) : null}
               <div className="p-5">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <span className="rounded-md bg-neutral-950 px-2.5 py-1 text-xs font-semibold text-white">
