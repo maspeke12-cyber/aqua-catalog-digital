@@ -27,7 +27,23 @@
     "bannerTitle": "Campaign Banner AQUA Elektronik",
     "bannerCaption": "Area Visual Utama Showroom • Rasio Landscape 16:10"
   },
-  "products": [],
+  "products": [
+    {
+      "id": "prod-1795575116605",
+      "name": "KULKAS Side by Side AQUA",
+      "model": "AQR-CSE696RSV-SL",
+      "slug": "kulkas-side-by-side-aqua-aqr-cse696rsv-sl",
+      "categoryName": "Refrigerator",
+      "shortInfo": "Kulkas dengan fitur Smart Ice & Water Dispenser, Bigger Capacity, Eliminate Bacteria & Odors, Twin Inverter Energy-saving, HCS, dan Daylight",
+      "description": "Kulkas dengan fitur Smart Ice & Water Dispenser, Bigger Capacity, Eliminate Bacteria & Odors, Twin Inverter Energy-saving, HCS, dan Daylight",
+      "badge": "Unit Showroom",
+      "highlights": [
+        "Unit resmi AQUA Elektronik",
+        "Tersedia di CLEO ELECTRONICS by TIARA"
+      ],
+      "specifications": []
+    }
+  ],
   "promos": [
     {
       "id": "promo-1",
