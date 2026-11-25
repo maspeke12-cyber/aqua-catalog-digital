@@ -31,6 +31,7 @@ export interface CategoryItem {
   slug: string;
   description: string;
   imageUrl?: string;
+  images?: string[];
 }
 
 export interface ProductSpecItem {

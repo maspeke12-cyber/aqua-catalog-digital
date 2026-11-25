@@ -13,6 +13,8 @@ import { Badge } from '@/components/ui/Badge';
 
 export function AdminClient() {
   const [tab, setTab] = useState<'products' | 'banners'>('products');
+  const [extraImages, setExtraImages] = useState<string[]>(["", "", ""]);
+  const [uploadingSlot, setUploadingSlot] = useState<number | null>(null);
   const [pin, setPin] = useState('2026');
   const [settings, setSettings] = useState<StoreSettings>(cmsData.settings as StoreSettings);
   const [hero, setHero] = useState<HeroData>(cmsData.hero as HeroData);
@@ -45,12 +47,15 @@ export function AdminClient() {
   };
 
   const resetForm = () => {
-    setEditId(null); setName(''); setModel(''); setBadge('Unit Showroom');
+    setEditId(null);
+    setExtraImages(["", "", ""]); setName(''); setModel(''); setBadge('Unit Showroom');
     setShortInfo(''); setHighlightsText(''); setSpecsText(''); setImageUrl('');
   };
 
   const startEdit = (p: ProductItem) => {
-    setEditId(p.id); setName(p.name); setModel(p.model); setCategory(p.categoryName);
+    setEditId(p.id);
+    const _imgs = (p as { images?: string[] }).images || [];
+    setExtraImages([_imgs[1] || "", _imgs[2] || "", _imgs[3] || ""]); setName(p.name); setModel(p.model); setCategory(p.categoryName);
     setBadge(p.badge || 'Unit Showroom'); setShortInfo(p.shortInfo);
     setHighlightsText((p.highlights || []).join(', '));
     setSpecsText((p.specifications || []).map((s) => `${s.label}: ${s.value}`).join('\n'));
@@ -92,6 +97,31 @@ export function AdminClient() {
     } catch (err) {
       setStatusMsg({ ok: false, text: err instanceof Error ? err.message : 'Terjadi kesalahan.' });
     } finally { setSaving(false); }
+  };
+
+  
+  const handleExtraPhotoUpload = async (slotIndex: number, file?: File) => {
+    if (!file) return;
+    setUploadingSlot(slotIndex);
+    try {
+      const fd = new FormData();
+      fd.append("file", file);
+      fd.append("folder", "products");
+      const res = await fetch("/api/upload", { method: "POST", body: fd });
+      const data = await res.json();
+      const url = data.url || data.path || data.fileUrl || "";
+      if (url) {
+        setExtraImages((prev) => {
+          const next = [...prev];
+          next[slotIndex] = url;
+          return next;
+        });
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setUploadingSlot(null);
+    }
   };
 
   return (
