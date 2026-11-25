@@ -111,7 +111,7 @@ export function HomepagePreview({ cmsData }: { cmsData?: Record<string, any> } =
                 <div>
                   {(item.imageUrl || item.image || item.images?.[0]) && (
                     <div className="bg-neutral-50 p-4">
-                      <img src={item.imageUrl || item.image || item.images?.[0]} alt={item.name} className="mx-auto block h-48 w-full object-contain" />
+                      <img src={item.imageUrl || item.image || item.images?.[0]} alt={item.name} className="mx-auto block h-60 w-full object-contain" />
                     </div>
                   )}
                   <div className="p-5">

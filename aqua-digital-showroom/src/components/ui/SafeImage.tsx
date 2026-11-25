@@ -18,7 +18,7 @@ export function SafeImage({ src, alt, eyebrow, label, ratioHint, className = '' 
   if (src && !hasError) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={src} alt={alt} onError={() => setFailedSrc(src)} className={`h-full w-full object-cover ${className}`} />
+      <img src={src} alt={alt} onError={() => setFailedSrc(src)} className={`h-full w-full object-contain p-2 ${className}`} />
     );
   }
 
