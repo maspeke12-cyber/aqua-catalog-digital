@@ -109,9 +109,9 @@ export function HomepagePreview({ cmsData }: { cmsData?: Record<string, any> } =
             {SHOWROOM_PRODUCTS.slice(0, 6).map((item: any) => (
               <div key={item.id || item.slug} className="flex flex-col justify-between overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm">
                 <div>
-                  {item.imageUrl && (
+                  {(item.imageUrl || item.image || item.images?.[0]) && (
                     <div className="bg-neutral-50 p-4">
-                      <img src={item.imageUrl} alt={item.name} className="mx-auto block h-48 w-full object-contain" />
+                      <img src={item.imageUrl || item.image || item.images?.[0]} alt={item.name} className="mx-auto block h-48 w-full object-contain" />
                     </div>
                   )}
                   <div className="p-5">
